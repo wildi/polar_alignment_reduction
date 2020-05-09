@@ -18,7 +18,9 @@ py3clean . && python3 setup.py sdist bdist_wheel && pip3 install . && tail_logs 
 ```
 
 Then start KStars/Ekos/INDI.
+
 ##Give it a try:
+
 Once installed the script is on $PATH. Start
 
 ```
@@ -33,7 +35,9 @@ INFO : mount gamma: +00:40:27.3, decimal: 0.6742389638617831
 INFO : mount    HA: +11:07:09.3,     dec: +89:19:32.7
 INFO : mount    Az: +00:00:42.4,     Alt: +46:48:02.0
 ```
+
 ##Help:
+
 ```
 usage: /home/wildi/.local/bin/tail_logs [-h] [--log-file-path LOG_FILE_PATH]
                                         [--level {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
@@ -55,5 +59,3 @@ optional arguments:
   --base-path BASE_PATH
                         : .indi/logs, INDI log file path relative to $HOME
 ```
-
-
