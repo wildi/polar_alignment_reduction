@@ -1,0 +1,3 @@
+include README.md
+recursive-include tail_logs_worker  *.py
+recursive-include tail_logs *.py
