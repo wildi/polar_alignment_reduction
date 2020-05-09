@@ -8,7 +8,8 @@ The primary purpose of tail_logs is to make INDI driver's log file more accessib
 
 The second purpose is to collect raw ccd simulator information and to calculate HA and Dec of the mount's hour axis. 
 
-#Installation for the impatient (on Linux):
+## Installation for the impatient (on Linux):
+
 Change to the directory, where this README.md is found.
 
 ```
@@ -19,7 +20,7 @@ py3clean . && python3 setup.py sdist bdist_wheel && pip3 install . && tail_logs 
 
 Then start KStars/Ekos/INDI.
 
-##Give it a try:
+## Give it a try:
 
 Once installed the script is on $PATH. Start
 
@@ -36,7 +37,7 @@ INFO : mount    HA: +11:07:09.3,     dec: +89:19:32.7
 INFO : mount    Az: +00:00:42.4,     Alt: +46:48:02.0
 ```
 
-##Help:
+## Help:
 
 ```
 usage: /home/wildi/.local/bin/tail_logs [-h] [--log-file-path LOG_FILE_PATH]
