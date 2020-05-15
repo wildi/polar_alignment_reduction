@@ -43,14 +43,14 @@ else:
         sys.exit(1)
     p_log= os.path.join(args.log_file_path, '{}.log'.format(stm))
 
-logformat= '%(asctime)s:%(name)s:%(levelname)s:%(message)s'
+logformat= '%(asctime)s:%(message)s'
 logging.basicConfig(filename=str(p_log), level=args.level.upper(), format=logformat)
-logger = logging.getLogger()
+logger = logging.getLogger('not_root_logger')
 
 if args.toconsole:
     # http://www.mglerner.com/blog/?p=8
     soh = logging.StreamHandler(sys.stdout)
-    formatter = logging.Formatter('%(levelname)s : %(message)s')
+    formatter = logging.Formatter('%(asctime)stl: %(message)s')
     soh.setFormatter(formatter)
     args.level='DEBUG'
     soh.setLevel(args.level)

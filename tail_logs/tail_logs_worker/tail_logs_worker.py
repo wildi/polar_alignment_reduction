@@ -38,7 +38,7 @@ class Tail_logs_worker():
         self.omega_sid = 2. *  math.pi / 86164.2 ;
 
     def tail(self):
-        self.lg.debug(f'tailing: {self.fn}')
+        self.lg.debug(f'{self.fn}')
         if os.path.isdir(self.fn):
             self.lg.debug(f'is a directory : {self.fn}')
             return
@@ -46,7 +46,7 @@ class Tail_logs_worker():
         two_entries = 0
         lns = list()
         for ln in tailer.follow(open(self.fn)):
-            self.lg.debug(f'tailing: {ln}')
+            self.lg.debug(''.join('%-7s' % item for item in ln.split('\t')))
 
             if '+++++++++++++' in ln:
                 continue
