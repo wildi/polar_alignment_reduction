@@ -29,7 +29,7 @@ iers.Conf.iers_auto_url.set('ftp://cddis.gsfc.nasa.gov/pub/products/iers/finals2
 
 
 class Tail_logs_worker():
-    terminate = False
+    
     def __init__(self, lg = None, args = None, fn = None):
         self.lg=lg
         self.args = args
