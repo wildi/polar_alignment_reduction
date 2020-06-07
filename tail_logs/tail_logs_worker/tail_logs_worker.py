@@ -141,8 +141,11 @@ class Tail_logs_worker():
 
         mnt_gamma = Angle(math.sqrt(dX.radian**2 + dY.radian**2) / d_tau.radian, unit = u.radian)
         mnt_dec = Angle(math.pi/2. - mnt_gamma.radian, unit = u.radian)
-        
-        mnt = SkyCoord(mnt_ha, mnt_dec, unit= u.radian, frame='gcrs') # gcrs close to JNow
+        try:
+            mnt = SkyCoord(mnt_ha, mnt_dec, unit= u.radian, frame='gcrs') # gcrs close to JNow
+        except ValueError as e:
+            self.lg.error('ValueError: {}'.format(e))
+            return
         loc_aa = AltAz(location=loc, obstime=t) 
         mnt_aa = mnt.transform_to(loc_aa)
 
