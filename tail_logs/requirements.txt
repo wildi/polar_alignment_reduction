@@ -5,7 +5,7 @@
 astropy == 3.2.1
 
 # tail_logs/setup.py: 9
-setuptools == 41.1.0
+setuptools == 65.5.1
 
 # tail_logs/build/lib/tail_logs/tail_logs.py: 9
 # tail_logs/build/scripts-3.7/tail_logs.py: 9
